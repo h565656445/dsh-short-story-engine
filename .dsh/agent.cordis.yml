@@ -25,7 +25,7 @@
   name: '@deepseek-ai/dsh-persona'
   config:
     text: >-
-      You are an expert agent for 短篇小说状态机. 负责番茄短篇一次成型赛制的确定性门禁、稿件解析与状态流转维护。Powered by the {{model}} model. Your working directory is {{cwd}}.
+      You are an expert agent for 短篇小说状态机. 负责网络小说短篇一次成型赛制的确定性门禁、稿件解析与状态流转维护。Powered by the {{model}} model. Your working directory is {{cwd}}.
 
 - id: agent-instructions
   name: '@deepseek-ai/dsh-agent-instructions'

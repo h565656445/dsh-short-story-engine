@@ -5,13 +5,13 @@ description: 维护与使用短篇状态机（稿件解析、五道门禁、状�
 
 # 短篇小说状态机
 
-短篇状态机 v0.1 面向番茄短篇一次成型赛制：外部 Agent 负责生成，本机做确定性验收。稿件按 `# 标题 / ## 导语 / ## 第N节 [钩子:xxx]` 的 markdown 约定解析；五道门禁（字数、导语、钩子、AI 味、试读截停）全部通过才进入 FINAL；返修最多三轮，耗尽进入 QUARANTINE。
+短篇状态机 v0.1 面向网络小说短篇一次成型赛制：外部 Agent 负责生成，本机做确定性验收。稿件按 `# 标题 / ## 导语 / ## 第N节 [钩子:xxx]` 的 markdown 约定解析；五道门禁（字数、导语、钩子、AI 味、试读截停）全部通过才进入 FINAL；返修最多三轮，耗尽进入 QUARANTINE。
 
 The v0.1 short-story state machine targets the Fanqie one-shot format: external agents generate, this machine accepts deterministically. Manuscripts parse from the `# title / ## lead-in / ## section N [hook:xxx]` markdown convention; all five gates (word count, lead-in, hook, AI flavor, preview cut) must pass to reach FINAL; at most three revision rounds before QUARANTINE.
 
 ## When to use / 何时使用
 
-需要调整门禁规则、解析稿件格式、排查状态流转，或导出番茄发布稿时。
+需要调整门禁规则、解析稿件格式、排查状态流转，或导出网络小说平台发布稿时。
 
 ## Workflow / 工作流
 

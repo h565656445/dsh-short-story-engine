@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""短篇状态机 v0.1 —— 番茄短篇一次成型赛制。
+"""短篇状态机 v0.1 —— 网络小说短篇一次成型赛制。
 
 主态: INIT -> OUTLINE -> RETRIEVAL -> DRAFT -> GATE_AUDIT -> (REVISE<=3) -> PREVIEW_CUT -> FINAL
 异常态: QUARANTINE(门禁不过且返修耗尽) / HALT(结构非法)
@@ -38,7 +38,7 @@ def load_config():
 
 
 def _count_cn(text):
-    """字数口径：去空白后字符数（与番茄后台口径接近）。"""
+    """字数口径：去空白后字符数（与网络小说平台后台口径接近）。"""
     return len(re.sub(r"\s", "", text))
 
 
@@ -92,7 +92,7 @@ def gate_lead_in(doc, cfg):
     n = _count_cn(doc["lead_in"])
     errs = []
     if g["required"] and n == 0:
-        errs.append("缺失导语（番茄短篇必需）")
+        errs.append("缺失导语（网络小说短篇必需）")
     elif not (g["min_chars"] <= n <= g["max_chars"]):
         errs.append(f"导语字数{n}越界[{g['min_chars']},{g['max_chars']}]")
     return {"gate": "lead_in_gate", "pass": not errs, "chars": n, "errors": errs}
@@ -216,7 +216,7 @@ def audit(manuscript_path):
 
 
 def export_publish(manuscript_path, out_path=None):
-    """导出发布稿：番茄整篇一次发布，每节开头插纯数字章节标识（1/2/3，平台据此分章）；
+    """导出发布稿：网络小说平台整篇一次发布，每节开头插纯数字章节标识（1/2/3，平台据此分章）；
     导语单独一块贴导语框。"第N节[钩子]"标记仅为引擎内部工作格式，不进发布稿。"""
     cfg = load_config()
     md = Path(manuscript_path).read_text(encoding="utf-8")

@@ -12,7 +12,7 @@
   "word_gate": {
     "story_min": 8000,
     "story_max": 24900,
-    "story_max_reason": "番茄按首投字数判档，24900为超短篇上限红线，超出即判为中短篇",
+    "story_max_reason": "网络小说平台按首投字数判档，24900为超短篇上限红线，超出即判为中短篇",
     "section_min": 800,
     "section_max": 1600,
     "min_sections": 6
@@ -21,7 +21,7 @@
     "required": true,
     "min_chars": 80,
     "max_chars": 220,
-    "note": "番茄短篇必需导语，概括核心冲突并埋最大钩子"
+    "note": "网络小说短篇必需导语，概括核心冲突并埋最大钩子"
   },
   "hook_gate": {
     "taxonomy": ["悬念", "危机", "反转预告", "打脸余波", "身份半揭", "情感冲击", "倒计时"],
@@ -53,7 +53,7 @@
   "retrieval_source": "../拆文库",
   "publish": {
     "mode": "single_submission",
-    "note": "番茄短篇整篇一次发布：发布稿不带任何节标记/钩子标注，正文连续；导语单独贴导语框。节标记仅为引擎内部工作格式，用 --publish 导出发布稿"
+    "note": "网络小说短篇整篇一次发布：发布稿不带任何节标记/钩子标注，正文连续；导语单独贴导语框。节标记仅为引擎内部工作格式，用 --publish 导出发布稿"
   },
   "revision_max_rounds": 3
 }
