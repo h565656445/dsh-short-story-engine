@@ -1,0 +1,3 @@
+name: 短篇小说状态机
+description: 短篇小说状态机（番茄短篇一次成型：五道确定性门禁 + 状态流转）的 DSH 预设。 / DSH preset for the short-story engine (Fanqie one-shot format: five deterministic gates + state transitions).
+order: 5

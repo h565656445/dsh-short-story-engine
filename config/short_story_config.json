@@ -1,0 +1,59 @@
+{
+  "mode": "short_story",
+  "version": "0.1.0",
+  "platform": "fanqie_short",
+  "track": {
+    "category": "女频脑洞",
+    "sub_track": "双重生+信息差",
+    "activity_targets": ["千字万金第三期(06.21-09.30)", "IP金品共创计划(06.21-09.30)"],
+    "classification_rule": "主线必须压在逆袭/信息差侧而非感情侧，以合法落位女频脑洞分类；对外分类与标签只能从taxonomy_source白名单原词中选择",
+    "taxonomy_source": "../data/fanqie_short_story_taxonomy_2026-08-02.json"
+  },
+  "word_gate": {
+    "story_min": 8000,
+    "story_max": 24900,
+    "story_max_reason": "番茄按首投字数判档，24900为超短篇上限红线，超出即判为中短篇",
+    "section_min": 800,
+    "section_max": 1600,
+    "min_sections": 6
+  },
+  "lead_in_gate": {
+    "required": true,
+    "min_chars": 80,
+    "max_chars": 220,
+    "note": "番茄短篇必需导语，概括核心冲突并埋最大钩子"
+  },
+  "hook_gate": {
+    "taxonomy": ["悬念", "危机", "反转预告", "打脸余波", "身份半揭", "情感冲击", "倒计时"],
+    "rule_every_section_ends_with_hook": true,
+    "rule_no_adjacent_repeat": true,
+    "final_section_marker": "闭环",
+    "final_section_forbids_hook": true,
+    "opening_hook_window_chars": 120,
+    "opening_conflict_signals": ["重生", "死", "顶罪", "离婚", "背叛", "坐牢", "协议", "葬礼", "出轨", "调包", "陪葬"]
+  },
+  "preview_cut": {
+    "target_ratio": 0.35,
+    "window": [0.3, 0.45],
+    "allowed_cut_hooks": ["反转预告", "身份半揭", "倒计时", "危机"],
+    "rule": "截停点必须落在节边界，且该节末钩子属于高潮悬置类；禁止停在情绪释放完成后的低谷"
+  },
+  "ai_flavor_gate": {
+    "blacklist": ["不禁", "仿佛", "犹如", "缓缓", "心中一紧", "嘴角勾起一抹", "眼底闪过一丝", "空气仿佛凝固", "深吸一口气", "无形的"],
+    "max_hits_per_thousand": 0.5,
+    "forbidden_chars": ["——", "【", "】"],
+    "forbidden_chars_note": "零容忍：破折号与方头括号一律不得出现，私信/消息用引号，插入语改句号或冒号"
+  },
+  "style_pack": {
+    "person": "第一人称",
+    "paragraph_max_sentences": 3,
+    "rhythm": "压制-反转-碾压循环，虐点打底再放爽点",
+    "ending": "亲情事业双丰收HE+余韵金句收尾"
+  },
+  "retrieval_source": "../拆文库",
+  "publish": {
+    "mode": "single_submission",
+    "note": "番茄短篇整篇一次发布：发布稿不带任何节标记/钩子标注，正文连续；导语单独贴导语框。节标记仅为引擎内部工作格式，用 --publish 导出发布稿"
+  },
+  "revision_max_rounds": 3
+}
